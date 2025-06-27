@@ -346,10 +346,4 @@ yaml
 - Opt for **BERT** when context and nuance matter.
 """
 
-# Save markdown to file
-markdown_path = "/mnt/data/nlp-word-embeddings-log.md"
-with open(markdown_path, "w") as f:
-    f.write(nlp_markdown)
-
-markdown_path
 
