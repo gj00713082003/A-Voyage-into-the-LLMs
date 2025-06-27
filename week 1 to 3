@@ -1,0 +1,179 @@
+
+# ✅ Python Foundation & Deep Learning Libraries - Learning Log
+
+This document records my completion and understanding of the foundational concepts and tools used in deep learning with Python. It includes Python basics, NumPy, Pandas, Matplotlib, and PyTorch.
+
+---
+
+## ✔️ Python Refresher
+
+✅ **Completed**
+- Variables, Loops, Functions, Data Structures
+- List comprehensions
+- File handling and exceptions
+
+### 🧪 Code Example:
+```python
+def greet(name):
+    return f"Hello, {name}!"
+
+names = ["Alice", "Bob", "Charlie"]
+for name in names:
+    print(greet(name))
+```
+
+---
+
+## ✔️ NumPy
+
+✅ **Completed Topics**:
+- Creating arrays, indexing, slicing, reshaping
+- Joining, splitting, searching, filtering, ufuncs
+
+### 🧪 Code Example:
+```python
+import numpy as np
+
+a = np.array([1, 2, 3, 4])
+b = np.array([[1, 2], [3, 4]])
+
+# Reshaping
+reshaped = b.reshape(4, 1)
+
+# Ufunc example
+sqrt_a = np.sqrt(a)
+print("Reshaped:
+", reshaped)
+print("Sqrt of a:", sqrt_a)
+```
+
+---
+
+## ✔️ Pandas
+
+✅ **Completed Topics**:
+- Series, DataFrames, reading/writing CSV
+- Filtering, sorting, grouping, handling NaN values
+
+### 🧪 Code Example:
+```python
+import pandas as pd
+
+data = {'Name': ['Alice', 'Bob', 'Charlie'], 'Age': [25, 30, 35]}
+df = pd.DataFrame(data)
+
+# Filtering
+filtered_df = df[df['Age'] > 28]
+print(filtered_df)
+```
+
+---
+
+## ✔️ Matplotlib
+
+✅ **Completed Topics**:
+- Line plots, bar charts, scatter plots
+- Customizing titles, axes, legends
+
+### 🧪 Code Example:
+```python
+import matplotlib.pyplot as plt
+
+x = [1, 2, 3, 4]
+y = [10, 20, 25, 30]
+
+plt.plot(x, y, marker='o', color='purple')
+plt.title("Line Plot Example")
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+plt.grid(True)
+plt.show()
+```
+
+---
+
+## ✔️ Google Colab / Jupyter Notebook
+
+✅ **Completed Setup & Usage**
+- Used Google Colab for all notebooks
+- Understood and used multiple code cells
+- Used Markdown + Python in cells
+
+---
+
+## ✔️ PyTorch (Beginner Level)
+
+✅ **Completed Topics**:
+- Tensors and basic operations
+- Creating simple neural network using `nn.Module`
+- Basic training loop
+- Used Autograd for backpropagation
+
+### 🧪 Code Example:
+```python
+import torch
+import torch.nn as nn
+import torch.optim as optim
+
+# Define a simple network
+class Net(nn.Module):
+    def __init__(self):
+        super(Net, self).__init__()
+        self.fc = nn.Linear(2, 1)
+
+    def forward(self, x):
+        return self.fc(x)
+
+model = Net()
+criterion = nn.MSELoss()
+optimizer = optim.SGD(model.parameters(), lr=0.01)
+
+# Dummy training loop
+for epoch in range(10):
+    inputs = torch.tensor([[1.0, 2.0]])
+    target = torch.tensor([[1.0]])
+
+    output = model(inputs)
+    loss = criterion(output, target)
+
+    optimizer.zero_grad()
+    loss.backward()
+    optimizer.step()
+
+    print(f"Epoch {epoch+1}, Loss: {loss.item()}")
+```
+
+---
+
+## 💡 Summary
+
+- ✅ Refreshed Python basics with functions and data structures.
+- ✅ Mastered array operations with **NumPy**.
+- ✅ Cleaned and manipulated data using **Pandas**.
+- ✅ Visualized data effectively using **Matplotlib**.
+- ✅ Built and trained basic models using **PyTorch**.
+- ✅ All code and experiments were performed using **Google Colab**.
+
+---
+
+## 📁 Folder Structure Suggestion for GitHub
+
+```
+python-foundation-learning/
+├── notebooks/
+│   ├── numpy_practice.ipynb
+│   ├── pandas_practice.ipynb
+│   ├── matplotlib_examples.ipynb
+│   └── pytorch_intro.ipynb
+├── images/
+│   └── example_plot.png
+├── python-foundation-learning-log.md
+└── README.md
+```
+
+---
+
+## 🚀 Ready for More!
+
+With these fundamentals in place, I’m ready to move forward into advanced deep learning topics like model optimization, CNNs, and more.
+
