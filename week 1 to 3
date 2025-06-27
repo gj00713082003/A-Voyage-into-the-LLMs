@@ -177,3 +177,179 @@ python-foundation-learning/
 
 With these fundamentals in place, I’m ready to move forward into advanced deep learning topics like model optimization, CNNs, and more.
 
+# Retry saving the elaborated NLP markdown content into a file now that the tool is available again
+
+nlp_markdown = """
+# 🧠 Natural Language Processing (NLP) - Learning Log
+
+This markdown summarizes key concepts in NLP including Regular Expressions, Word Embeddings, Text Preprocessing, and Sentiment Analysis. It also explores different techniques used to convert textual data into numerical form — essential for building machine learning models.
+
+---
+
+## 🧾 Contents
+
+- Regular Expressions in Python
+- Word Embeddings (Detailed)
+- Text Preprocessing with Regex
+- Neural vs Frequency-based Embeddings
+- Embedding Techniques Comparison
+
+---
+
+## 🔍 Python RegEx
+
+Python's `re` module allows powerful text matching and manipulation using regular expressions. It is used to clean and structure text before modeling.
+
+| Action | RegEx Pattern | Reason |
+|-------|---------------|--------|
+| Remove special characters | `[^a-zA-Z0-9\\s]` | Clean noisy text |
+| Remove email addresses | `\\S+@\\S+` | Avoid unnecessary tokens |
+| Remove URLs | `http[s]?://\\S+` | Standardize input |
+| Remove numbers | `\\d+` | Eliminate noise |
+| Lowercase | `.lower()` | Normalize case |
+| Remove whitespace | `\\s+` | Prevent tokenization issues |
+| Remove punctuation | `[^\\w\\s]` | Remove grammar artifacts |
+| Tokenize words | `\\b\\w+\\b` | Word-level separation |
+| Strip HTML | `<[^>]+>` | Clean web data |
+| Emojis | Unicode regex | Text-normalization |
+| Expand contractions | `"can't" → "can not"` | Improve clarity |
+
+---
+
+## 🧬 Word Embeddings
+
+Word embeddings are vector representations of words, enabling machine learning models to interpret text numerically.
+
+### ⚡ Why Use Word Embeddings?
+- Capture semantic meaning
+- Dimensionality reduction
+- Represent word relationships
+- Improve model generalization
+
+### 🪙 Process Flow:
+Words → Numeric vectors → Train/Test Model
+
+
+### ✅ Pros
+- Fast training compared to symbolic models like WordNet
+- Used in almost all modern NLP architectures
+
+### ❌ Cons
+- Can be memory intensive
+- Biased by training corpus
+- Cannot distinguish homophones (e.g., cell/sell)
+
+---
+
+## 🧹 Preprocessing Best Practices
+
+- Keep preprocessing consistent across training and deployment
+- Use special tokens for unknown or rare words (e.g., `UNK`)
+- Ensure consistent embedding dimensions
+
+---
+
+## 📊 Types of Embedding Techniques
+
+![Techniques in Embeddings in NLP](Screenshot%202025-06-25%20223036.png)
+
+---
+
+## 📚 Frequency-Based Approaches
+
+### 👜 Bag of Words (BoW)
+Represents text by counting word occurrences. Ignores grammar and word order.
+
+**Cons**:
+- High dimensionality
+- No semantic context
+
+### 🧮 TF-IDF (Term Frequency-Inverse Document Frequency)
+Assigns weight to words based on how unique and frequent they are across documents.
+
+**Formula**:
+TF-IDF(t, d, D) = TF(t, d) × IDF(t, D)
+
+yaml
+
+
+**Pros**:
+- Highlights important terms
+
+**Cons**:
+- Doesn't capture context or semantics
+
+---
+
+## 🤖 Prediction-Based Embeddings
+
+### 1️⃣ Word2Vec
+
+- **CBOW**: Predicts a target word from context
+- **Skip-Gram**: Predicts context from a target word
+
+| Feature | CBOW | Skip-Gram |
+|--------|------|-----------|
+| Focus | Frequent words | Rare words |
+| Speed | Faster | Slower |
+| Accuracy | Lower | Higher |
+| Use Case | Large data | Small/rare words |
+
+### 2️⃣ GloVe (Global Vectors)
+
+- Uses word co-occurrence matrix
+- Static embedding
+
+### 3️⃣ FastText
+
+- Breaks words into n-grams
+- Great for handling rare/misspelled words
+
+---
+
+## 🌐 Contextualized Embeddings
+
+### 🧠 BERT
+
+- Transformer-based
+- Bi-directional context awareness
+- High performance on NLP tasks
+
+### 🧠 ELMo
+
+- Uses LSTM
+- Contextual vectors for each occurrence of a word
+
+### 🤖 GPT
+
+- Predicts next token (auto-regressive)
+- Useful for text generation and completion
+
+---
+
+## 📈 Embedding Comparisons
+
+| Feature | GloVe | FastText | BERT |
+|--------|-------|----------|------|
+| Type | Static | Static | Contextualized |
+| OOV Handling | ❌ | ✅ | ✅ |
+| Contextual | ❌ | ❌ | ✅ |
+| Morphology | ⚠️ | ✅ | ✅ |
+| Best Use | Similarity | Morph-rich text | Deep NLP |
+
+---
+
+## ✅ Conclusion
+
+- Use **BoW/TF-IDF** for quick baselines.
+- Choose **Word2Vec/FastText** for efficient semantic similarity.
+- Opt for **BERT** when context and nuance matter.
+"""
+
+# Save markdown to file
+markdown_path = "/mnt/data/nlp-word-embeddings-log.md"
+with open(markdown_path, "w") as f:
+    f.write(nlp_markdown)
+
+markdown_path
+
