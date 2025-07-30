@@ -77,7 +77,8 @@ The number of convolutional layers is adjustable using the `num_conv_layers` par
 
 ### Training vs Validation Accuracy and Loss
 
-[Training vs Validation Accuracy and Loss](.png)
+
+<img width="1189" height="490" alt="download" src="https://github.com/user-attachments/assets/674ed3f4-999b-4e67-8047-ffdfb0d57d7a" />
 
 - Slight overfitting detected after 2nd epoch.
 - Model generalizes well overall with high accuracy and low validation loss.
@@ -86,7 +87,10 @@ The number of convolutional layers is adjustable using the `num_conv_layers` par
 
 ## 📊 Number of Conv Layers vs Test Accuracy
 
-![Test Accuracy vs Conv Layers](.png)
+### Test Accuracy vs Conv Layers
+
+<img width="709" height="470" alt="download" src="https://github.com/user-attachments/assets/27c35e78-4400-49d9-8708-cd2f5c7f0b95" />
+
 
 ### Test Accuracy Results:
 | Conv Layers | Test Accuracy |
@@ -96,7 +100,7 @@ The number of convolutional layers is adjustable using the `num_conv_layers` par
 | 3           | **99.13%**     |
 | 4           | 98.95%         |
 
----
+
 
 ##  Conclusions
 
@@ -108,3 +112,5 @@ The number of convolutional layers is adjustable using the `num_conv_layers` par
 - **Bias vs Variance Tradeoff**:
   - Fewer layers → Underfitting (high bias)
   - Too many layers → Overfitting (high variance)
+## Colab Link
+https://colab.research.google.com/drive/1GJ8whWnjzzEEqSIp6CnoFlwaj7_LLAo3?usp=sharing
