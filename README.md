@@ -10,7 +10,7 @@ The project will aim to cover LLMs and NLP from the basics while going into dept
 -  Sentiment_Analysis
 -  Digit_Classification
 -  
-## Tentative Timeline
+## Content
 
 -  Pandas, NumPy, and basics of Python
 -  Text Processing and Embeddings 
